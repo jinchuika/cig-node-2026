@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "Martillo de uña 16 oz", "categoria": "Herramientas", "precio": 85.00, "existencias": 24 },
+  { "id": 2, "nombre": "Desarmador de cruz", "categoria": "Herramientas", "precio": 32.50, "existencias": 40 },
+  { "id": 3, "nombre": "Taladro inalámbrico 20 V", "categoria": "Herramientas eléctricas", "precio": 1150.00, "existencias": 6 },
+  { "id": 4, "nombre": "Pulidora 4 1/2 pulgadas", "categoria": "Herramientas eléctricas", "precio": 495.00, "existencias": 9 },
+  { "id": 5, "nombre": "Cable eléctrico calibre 12 (metro)", "categoria": "Electricidad", "precio": 7.25, "existencias": 350 },
+  { "id": 6, "nombre": "Tomacorriente doble", "categoria": "Electricidad", "precio": 18.00, "existencias": 75 },
+  { "id": 7, "nombre": "Pintura látex blanca (galón)", "categoria": "Pintura", "precio": 145.00, "existencias": 18 },
+  { "id": 8, "nombre": "Rodillo de 9 pulgadas", "categoria": "Pintura", "precio": 39.90, "existencias": 4 }
+]

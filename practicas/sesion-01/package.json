@@ -1,0 +1,12 @@
+{
+  "name": "practica-sesion-01",
+  "version": "1.0.0",
+  "description": "Práctica de la sesión 1: event loop, fs/promises y ES Modules",
+  "type": "module",
+  "scripts": {
+    "orden": "node orden.js",
+    "resumen": "node resumen.js",
+    "principal": "node principal.js",
+    "dev": "node --watch principal.js"
+  }
+}

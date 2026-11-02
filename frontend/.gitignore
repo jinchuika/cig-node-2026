@@ -1,0 +1,23 @@
+# Dependencias. Nunca se suben al repositorio: se reconstruyen con npm install.
+node_modules
+
+# Resultado del build de produccion (sesion 6).
+dist
+dist-ssr
+
+# Variables de entorno locales. El archivo .env.example si se sube.
+.env
+.env.local
+.env.*.local
+
+# Registros de errores.
+npm-debug.log*
+yarn-debug.log*
+*.log
+
+# Archivos del editor y del sistema operativo.
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db

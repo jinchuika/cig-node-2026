@@ -1,0 +1,12 @@
+# Dependencias instaladas con npm
+node_modules/
+
+# Variables de entorno
+.env
+
+# Bases de datos SQLite
+*.db
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
