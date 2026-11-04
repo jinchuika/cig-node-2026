@@ -1,0 +1,42 @@
+# contactos.http
+# Peticiones de prueba para la API de contactos.
+# Con la extensión REST Client: clic en "Send Request" encima de cada petición.
+# Antes de enviar, prediga qué código de estado y qué respuesta va a recibir.
+
+@base = http://localhost:3000
+
+### 1. Listado completo
+GET {{base}}/contactos
+
+### 2. Un contacto por id
+GET {{base}}/contactos/2
+
+### 3. Un id que no existe
+GET {{base}}/contactos/99
+
+### 4. Un id que no es número
+GET {{base}}/contactos/abc
+
+### 5. Filtro por nombre (query)
+GET {{base}}/contactos?nombre=ana
+
+### 6. Crear un contacto
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "Sofía Tzul",
+  "telefono": "41234567",
+  "correo": "sofia.tzul@correo.com"
+}
+
+### 7. Crear un contacto sin nombre
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "telefono": "41234567"
+}
+
+### 8. Ruta que no existe
+GET {{base}}/agenda

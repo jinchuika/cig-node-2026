@@ -1,0 +1,14 @@
+{
+  "name": "practica-sesion-02",
+  "version": "1.0.0",
+  "description": "Práctica de la sesión 2: el mismo servidor de contactos con node:http y con Express",
+  "type": "module",
+  "scripts": {
+    "http": "node --watch servidor-http.js",
+    "express": "node --watch servidor-express.js",
+    "mio": "node --watch mi-servidor.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
