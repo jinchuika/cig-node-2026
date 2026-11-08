@@ -1,0 +1,12 @@
+{
+  "name": "practica-sesion-03",
+  "version": "1.0.0",
+  "description": "Práctica de la sesión 3: middlewares, Router y variables de entorno sobre la API de contactos",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env servidor.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

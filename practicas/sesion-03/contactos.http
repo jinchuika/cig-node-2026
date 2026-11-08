@@ -1,0 +1,48 @@
+# contactos.http
+# Peticiones de prueba de la práctica de la sesión 3.
+# Mire la terminal del servidor después de cada una: ahí se ve el orden de los middlewares.
+
+@base = http://localhost:3000
+@llave = cig-2026
+
+### 1. Listado: pasa por log, tiempo, cors y la ruta
+GET {{base}}/contactos
+
+### 2. Un contacto por id
+GET {{base}}/contactos/2
+
+### 3. Crear SIN llave: exigirLlave corta con 401
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "Sofía Tzul",
+  "telefono": "41234567",
+  "correo": "sofia.tzul@correo.com"
+}
+
+### 4. Crear con llave equivocada: 401
+POST {{base}}/contactos
+Content-Type: application/json
+x-llave: otra-cosa
+
+{
+  "nombre": "Sofía Tzul"
+}
+
+### 5. Crear con la llave correcta: 201
+POST {{base}}/contactos
+Content-Type: application/json
+x-llave: {{llave}}
+
+{
+  "nombre": "Sofía Tzul",
+  "telefono": "41234567",
+  "correo": "sofia.tzul@correo.com"
+}
+
+### 6. Preflight: lo que el navegador pregunta antes de un POST desde otro origen
+OPTIONS {{base}}/contactos
+Origin: http://localhost:5173
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type
