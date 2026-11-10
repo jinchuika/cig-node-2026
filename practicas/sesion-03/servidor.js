@@ -5,7 +5,7 @@
 
 import express from 'express';
 import rutasContactos from './rutas-contactos.js';
-import { registrarPeticion, medirTiempo, permitirOrigen } from './middlewares.js';
+import { registrarPeticion, medirTiempo, permitirOrigen, exigirLlave } from './middlewares.js';
 
 const PUERTO = process.env.PUERTO; // viene de .env gracias a --env-file
 const app = express();
@@ -14,6 +14,7 @@ const app = express();
 app.use(registrarPeticion); // 1. anota la petición
 app.use(medirTiempo);       // 2. empieza a medir
 app.use(permitirOrigen);    // 3. CORS; contesta OPTIONS aquí mismo
+app.use(exigirLlave);       // 5. Ahora todas las rutas piden la llave
 app.use(express.json());    // 4. convierte el cuerpo JSON en req.body
 
 // Todas las rutas que empiezan con /contactos las atiende el Router

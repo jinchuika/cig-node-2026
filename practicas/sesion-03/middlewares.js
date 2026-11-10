@@ -5,7 +5,8 @@
 
 // 1. Log: anota cada petición que llega
 export function registrarPeticion(req, res, next) {
-  console.log(`[log] ${req.method} ${req.originalUrl}`);
+  const inicio = new Date().toISOString();
+  console.log(`[log ${inicio}] ${req.method} ${req.originalUrl}`);
   next(); // sin esta línea la petición se queda esperando para siempre
 }
 
