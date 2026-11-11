@@ -1,0 +1,62 @@
+# contactos.http
+# Peticiones de prueba de la práctica de la sesión 4.
+# Todas las respuestas de error tienen la forma { "error": "...", "detalles": [...] }
+
+@base = http://localhost:3000
+
+### 1. Listado (200)
+GET {{base}}/contactos
+
+### 2. Contacto que no existe (404 desde la ruta)
+GET {{base}}/contactos/99
+
+### 3. Ruta que no existe (404 desde noEncontrado)
+GET {{base}}/agenda
+
+### 4. Crear un contacto válido (201)
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "Sofía Tzul",
+  "telefono": "41234567",
+  "correo": "sofia.tzul@correo.com"
+}
+
+### 5. Crear con los tres campos mal (400 con tres detalles)
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "telefono": "4123",
+  "correo": "sofia.correo.com"
+}
+
+### 6. Crear sin cuerpo (400: faltan los tres)
+POST {{base}}/contactos
+
+### 7. Campo extra: se ignora (201 sin "admin")
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "Pedro Xol",
+  "telefono": "50112233",
+  "correo": "pedro.xol@correo.com",
+  "admin": true
+}
+
+### 8. JSON mal escrito: falta la comilla de cierre (400)
+POST {{base}}/contactos
+Content-Type: application/json
+
+{
+  "nombre": "Pedro Xol
+}
+
+### 9. Error lanzado a propósito (500)
+GET {{base}}/pruebas/error
+
+### 10. Error dentro de una función async (500, Express 5 lo atrapa)
+GET {{base}}/pruebas/async
