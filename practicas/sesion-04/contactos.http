@@ -11,7 +11,7 @@ GET {{base}}/contactos
 GET {{base}}/contactos/99
 
 ### 3. Ruta que no existe (404 desde noEncontrado)
-GET {{base}}/agenda
+POST {{base}}/agenda
 
 ### 4. Crear un contacto válido (201)
 POST {{base}}/contactos
@@ -20,7 +20,7 @@ Content-Type: application/json
 {
   "nombre": "Sofía Tzul",
   "telefono": "41234567",
-  "correo": "sofia.tzul@correo.com"
+  "correo": "sofia.tzul@serviclima.com"
 }
 
 ### 5. Crear con los tres campos mal (400 con tres detalles)
@@ -43,7 +43,7 @@ Content-Type: application/json
 {
   "nombre": "Pedro Xol",
   "telefono": "50112233",
-  "correo": "pedro.xol@correo.com",
+  "correo": "pedro.xol@serviclima.com",
   "admin": true
 }
 

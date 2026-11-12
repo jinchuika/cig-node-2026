@@ -47,5 +47,5 @@ export function manejarErrores(error, req, res, next) {
   // Cualquier otro error es un fallo nuestro: se anota completo en la terminal
   // y al cliente solo se le dice que algo falló.
   console.error(error);
-  res.status(500).json({ error: 'Error interno del servidor', detalles: [] });
+  res.status(500).json({ error: 'Error interno del servidor. Contacte a soporte', detalles: [] });
 }

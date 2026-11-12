@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const contacto = contactos.find((c) => c.id === Number(req.params.id));
   if (!contacto) {
-    throw new ErrorHttp(404, `No existe el contacto ${req.params.id}`);
+    throw new ErrorHttp(404, `No existe el contacto con el id: ${req.params.id}`);
   }
   res.json(contacto);
 });

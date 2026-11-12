@@ -13,9 +13,8 @@ const reglas = {
     return null;
   },
   correo: (valor) => {
-    // algo@algo.algo, sin espacios
-    if (typeof valor !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor)) {
-      return 'Correo no válido';
+    if (typeof valor !== 'string' || !/^[^\s@]+@serviclima\.com$/.test(valor)) {
+      return 'Correo no válido. Debe ser un correo válido y tener el dominio @serviclima.com';
     }
     return null;
   },
