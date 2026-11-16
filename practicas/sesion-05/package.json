@@ -1,0 +1,11 @@
+{
+  "name": "practica-sesion-05",
+  "version": "1.0.0",
+  "description": "Práctica de la sesión 5: SQLite con node:sqlite sobre la agenda de contactos",
+  "type": "module",
+  "scripts": {
+    "crear": "node crear.js",
+    "consultar": "node consultar.js",
+    "inyeccion": "node inyeccion.js"
+  }
+}
